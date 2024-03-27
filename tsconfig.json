@@ -4,6 +4,8 @@
 
     "declaration": true,
     "sourceMap": true,
+    // Required to enable converting .js + map -> .ts
+    "inlineSources": true,
 
     "module": "commonjs",
     "moduleResolution": "node",
@@ -24,7 +26,5 @@
     "noEmit": true
   },
 
-  "exclude": [
-    "**/__tests__"
-  ]
+  "exclude": ["**/__tests__"]
 }
