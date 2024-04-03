@@ -43,7 +43,6 @@ function getPathsFromConfig() {
     for (const mod of lwcConfig.modules) {
         if (mod.dir) Object.assign(paths, getPathsInDirectory(mod.dir));
     }
-    console.log(paths);
     return paths;
 }
 

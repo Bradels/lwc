@@ -16,6 +16,6 @@ export default class extends LightningElement {
         console.log(this.counter++);
     }
     decrement() {
-        console.log(this.counter--);
+        throw new Error('No, thanks!');
     }
 }
