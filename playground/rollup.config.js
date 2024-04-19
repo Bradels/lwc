@@ -47,6 +47,8 @@ function getPathsFromConfig() {
     for (const mod of lwcConfig.modules) {
         if (mod.dir) Object.assign(paths, getPathsInDirectory(mod.dir));
     }
+    // Log the result so we can manually update tsconfig.json
+    console.log(JSON.stringify(paths, null, 2));
     return paths;
 }
 
