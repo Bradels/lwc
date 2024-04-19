@@ -2,6 +2,8 @@
     "compilerOptions": {
         "strict": true,
 
+        // Required to enable converting .js + map -> .ts
+        "inlineSources": true,
         "declaration": true,
         "sourceMap": true,
 

@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "strict": true,
+
+        "declaration": true,
+        "declarationDir": ".",
+        "sourceMap": true,
+        // Required to enable converting .js + map -> .ts
+        "inlineSources": true,
+
+        "outDir": "dist",
+
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+
+        "target": "es2021",
+        "lib": ["es2021"],
+
+        // @rollup/plugin-typescript ignores this setting (it always emits); we can set it here to
+        // facilitate type checking without running the full build
+        "noEmit": true
+    },
+    "include": ["src/"],
+    "exclude": []
+}
