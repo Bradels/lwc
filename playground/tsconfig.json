@@ -22,7 +22,13 @@
         "noEmit": true,
 
         "allowJs": true,
-        "checkJs": true
+        "checkJs": true,
+
+        "paths": {
+            "x/app": ["./src/modules/x/app/app.ts"],
+            "x/counter": ["./src/modules/x/counter/counter.ts"],
+            "x/multiply": ["./src/modules/x/multiply/multiply.js"]
+        }
     },
     "include": ["src/"],
     "exclude": []
