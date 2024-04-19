@@ -15,7 +15,7 @@
         "esModuleInterop": true,
 
         "target": "es2021",
-        "lib": ["es2021"],
+        "lib": ["es2021", "DOM"],
 
         // @rollup/plugin-typescript ignores this setting (it always emits); we can set it here to
         // facilitate type checking without running the full build
