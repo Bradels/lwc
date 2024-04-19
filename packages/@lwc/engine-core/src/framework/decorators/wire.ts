@@ -18,10 +18,11 @@ import { updateComponentValue } from '../update-component-value';
  * @param _adapter
  * @param _config
  */
+// This definition is very broad, but LWC decorators are transformed away, so it doesn't super matter.
 export default function wire(
     _adapter: WireAdapterConstructor,
     _config?: Record<string, any>
-): PropertyDecorator | MethodDecorator {
+): (target: any, context: any) => void {
     if (process.env.NODE_ENV !== 'production') {
         assert.fail('@wire(adapter, config?) may only be used as a decorator.');
     }

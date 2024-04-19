@@ -20,7 +20,8 @@ import { isUpdatingTemplate, getVMBeingRendered } from '../template';
  * @param propertyKey
  * @param descriptor
  */
-export default function api(target: any, propertyKey: string, descriptor: PropertyDescriptor): void;
+// This definition is very broad, but LWC decorators are transformed away, so it doesn't super matter.
+export default function api(target: any, context: any): void;
 export default function api() {
     if (process.env.NODE_ENV !== 'production') {
         assert.fail(`@api decorator can only be used as a decorator function.`);

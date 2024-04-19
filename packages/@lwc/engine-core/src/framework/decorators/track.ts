@@ -22,12 +22,8 @@ import { logError } from '../../shared/logger';
  * @param propertyKey
  * @param descriptor
  */
-export default function track(
-    target: any,
-    propertyKey: string,
-    descriptor: PropertyDescriptor
-): any;
-export default function track(target: any): any {
+// This definition is very broad, but LWC decorators are transformed away, so it doesn't super matter.
+export default function track(target: any, _context: any): void {
     if (arguments.length === 1) {
         return getReactiveProxy(target);
     }
