@@ -14,5 +14,3 @@ export default class extends LightningElement {
         this.inputs[event.target.name as keyof typeof this.inputs] = +event.target.value;
     }
 }
-
-document.addEventListener('click', (evt) => {});
