@@ -20,6 +20,8 @@ const lwcConfig = loadJson('./lwc.config.json');
 
 const __ENV__ = process.env.NODE_ENV ?? 'development';
 
+const extensions = ['.ts', '.mts', '.cts', '.d.ts', '.js', '.mjs', '.cjs'];
+
 function getPathsInDirectory(dirname) {
     const paths = {};
     const basePath = path.resolve(__dirname, dirname);
@@ -28,8 +30,10 @@ function getPathsInDirectory(dirname) {
         const nsPath = path.join(basePath, ns.name);
         for (const cmp of fs.readdirSync(nsPath, { withFileTypes: true })) {
             if (!cmp.isDirectory()) continue;
-            const cmpPath = path.join(nsPath, cmp.name, cmp.name + '.ts');
-            if (!fs.statSync(cmpPath).isFile()) continue;
+            const cmpBase = path.join(nsPath, cmp.name, cmp.name);
+            const ext = extensions.find((e) => fs.existsSync(cmpBase + e));
+            if (!ext) continue; // component file does not exist?!
+            const cmpPath = cmpBase + ext;
             const alias = `${ns.name}/${cmp.name}`;
             const resolved = '.' + path.sep + path.relative(__dirname, cmpPath);
             paths[alias] = [resolved];
