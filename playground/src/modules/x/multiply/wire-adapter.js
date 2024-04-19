@@ -3,6 +3,7 @@
  * This is for demonstration purposes only.
  */
 export class multiply {
+    /** @param {Function} dataCallback */
     constructor(dataCallback) {
         this.dataCallback = dataCallback;
     }
@@ -12,6 +13,7 @@ export class multiply {
     disconnect() {
         // required, but not used for this demo
     }
+    /** @param {{first: number; second: number}} config  */
     update(config) {
         // Do a fake async data request
         this.dataCallback('...'); // "loading" state
