@@ -202,8 +202,8 @@ function testFixtures() {
             });
 
             return {
-                'expected.html': result ? formatHTML(result) : undefined,
-                'error.txt': err,
+                'expected.html': result ? formatHTML(result) : '',
+                'error.txt': err ?? '',
             };
         }
     );
