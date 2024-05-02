@@ -22,7 +22,6 @@ module.exports = {
         // Not fully implemented; tests are still failing
         // '<rootDir>/packages/@lwc/ssr-compiler',
         '<rootDir>/packages/@lwc/style-compiler',
-        '<rootDir>/packages/@lwc/synthetic-shadow',
         '<rootDir>/packages/@lwc/template-compiler',
         '<rootDir>/packages/@lwc/wire-service',
         '<rootDir>/packages/lwc',
