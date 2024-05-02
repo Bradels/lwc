@@ -172,13 +172,13 @@ function testFixtures() {
                     config.props || {}
                 );
                 return {
+                    'error.txt': '',
                     'expected.html': formatHTML(result),
-                    'error.txt': undefined,
                 };
             } catch (_err: any) {
                 return {
                     'error.txt': _err.message,
-                    'expected.html': undefined,
+                    'expected.html': '',
                 };
             }
         }
